@@ -23,5 +23,5 @@
 - **后续升级方案**：若需完整 micro-ROS 功能，可替换为 STM32F4 系列，直接使用官方 `nucleo_f446re` 模板即可完成移植。
 
 ### 产出
-- `ros2/micro_ros_setup/`：已编译的构建环境
+- `ros2/micro_ros_design/`：已编译的构建环境
 - `04_micro_ros/`：含 FreeRTOS + micro-ROS 代码框架的 CubeIDE 工程
