@@ -174,7 +174,7 @@ The robot carries its own power: a 3S LiPo battery (12V nominal, ~12.6V fully ch
 
 During development, the STM32 was powered via ST-Link's 3.3V pin. For standalone operation, the ST-Link is disconnected and the step-down module supplies 5V directly to the core board's 5V pin. The TB6612's `STBY` pin is tied to 5V (high = enable).
 
-*[Place system integration photo here. Show the fully assembled robot with all modules mounted on the chassis, battery strapped on, Bluetooth module visible, and camera mounted at the front.]*
+<img src="1.png"/>
 
 ---
 
