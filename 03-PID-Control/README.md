@@ -33,4 +33,4 @@
 ## 文件说明
 - `02_Car_PID/`：STM32CubeIDE完整工程
 - `pid_serial_data.png`：SSCOM串口转速数据截图
-- `pid_disturbance_test.mp4`：抗扰动测试视频（待上传）
+- `pid_disturbance_test.mp4`：【小车轮子抗扰动试验】https://www.bilibili.com/video/BV1XMum6yEUC?vd_source=ca02a8f800081a3f155da90b42811dbe
