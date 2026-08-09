@@ -21,4 +21,4 @@
 
 ## 文件说明
 - `01_Car_Test/`：STM32CubeIDE完整工程
-- `openloop_test.mp4`：【335efce7af04f9399de7b8bb2ac7c353】https://www.bilibili.com/video/BV1W4um6YE7F?vd_source=ca02a8f800081a3f155da90b42811dbe
+- `openloop_test.mp4`：【小车轮子转动试验】https://www.bilibili.com/video/BV1XMum6yE4K?vd_source=ca02a8f800081a3f155da90b42811dbe
