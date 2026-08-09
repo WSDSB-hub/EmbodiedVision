@@ -50,17 +50,17 @@ The motors use Hall-effect quadrature encoders producing 13 pulses per revolutio
 
 TIM3 is configured in Encoder Mode for the left motor, reading A-phase on PA6 and B-phase on PA7. TIM4 is configured identically for the right motor on PB6 and PB7. Both timers are set to TI1+TI2 mode, which counts on every edge of both channels — this gives 4× decoding, so the effective resolution is:
 
-*[Place formula image here: Pulses per revolution = 13 (PPR) × 4 (4× decoding) × 28 (gear ratio) = 1456]*
+<img src="2.png"/>
 
 ### Speed Measurement
 
 A 10ms periodic interrupt from TIM1 triggers the control loop. In each iteration, the current encoder counter value is read using `__HAL_TIM_GET_COUNTER()`. The pulse delta from the previous reading is computed:
 
-*[Place formula image here: Delta = counter_now - counter_last]*
+<img src="3.png"/>
 
 The delta is then converted to RPM:
 
-*[Place formula image here: RPM = (Delta × 6000) / 1456]*
+<img src="4.png"/>
 
 The factor 6000 comes from: 100 (to scale from 10ms to 1 second) × 60 (to scale from seconds to minutes).
 
@@ -72,11 +72,11 @@ The PID controller is implemented as a positional (not incremental) algorithm, w
 
 The control law is:
 
-*[Place formula image here: u(t) = u0 + Kp*e(t) + Ki*∫e(t)dt + Kd*de(t)/dt]*
+<img src="5.png"/>
 
 Discretized for the 10ms control period:
 
-*[Place formula image here: u[k] = u0 + Kp*e[k] + Ki*∑e[i] + Kd*(e[k] - e[k-1])]*
+<img src="6.png"/>
 
 Where `u₀ = 275` is the feed-forward base duty cycle (27.5%), determined experimentally as the approximate steady-state duty needed to maintain 100 RPM under no load.
 
@@ -135,7 +135,7 @@ The model outputs a relative depth map, which is resized back to the original fr
 
 For each YOLO detection box, the average depth value is computed from a 10×10 pixel region centered on the bounding box. This average depth value is converted to an approximate metric distance using a hand-calibrated scaling constant:
 
-*[Place formula image here: Distance (m) ≈ 150 / (average_depth_value + ε)]*
+<img src="7.png"/>
 
 The constant `150` was determined by placing an object at a known 1-meter distance and recording the average depth value in that region. This is a rough approximation — MiDaS outputs relative (inverse) depth, not absolute metric depth — but it is sufficient for the robot's obstacle avoidance logic, which only needs to know "is something close or far?"
 
