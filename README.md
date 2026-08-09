@@ -38,7 +38,7 @@ The two processors communicate over Bluetooth. The laptop sends single ASCII cha
 
 The hardware design includes two protective measures that were added after early failures. A 100μF electrolytic capacitor is connected in parallel across the motor power rail (`VIN+` to `VIN-`) to absorb the back-EMF voltage spikes generated when motors start, brake, or are manually turned. Without this capacitor, the instantaneous voltage can exceed the TB6612's internal MOSFET breakdown voltage. Six 1kΩ resistors are placed in series with the control signal lines (`PA0→PWMA`, `PA2→AIN1`, `PA3→AIN2`, `PA1→PWMB`, `PA4→BIN1`, `PA5→BIN2`). If the TB6612 fails internally and allows 12V to backfeed through these lines, the resistors limit the current to approximately 12mA — well within the STM32 GPIO's survival range.
 
-*[Place hardware setup photo here. Show the complete wiring: STM32 board, TB6612 module, motors, battery, step-down module, Bluetooth module, breadboard with capacitor and resistors.]*
+<img src="hardware setup(1).png"/>
 
 ---
 
@@ -106,7 +106,7 @@ The parameters were tuned manually using real-time RPM visualization through the
 | Disturbance Recovery Time | <1 second |
 | Recovery Behavior | Returns to steady-state within 1s after manual wheel grab |
 
-*[Place PID response curve here. Show target RPM (100) as a horizontal line and actual RPM over time. The curve should start at 0, rise to ~95 with slight overshoot, and stabilize. A second disturbance event should show a momentary dip followed by recovery within 1 second. Label the axes and indicate the recovery time.]*
+<img src="pid serial data.png"/>
 
 ---
 
