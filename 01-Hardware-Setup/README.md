@@ -26,4 +26,5 @@
 - 底盘：两轮差速小车底盘（含万向轮）
 
 ## 接线图
-![硬件接线](hardware_setup.jpg)
+hardware setup(1)
+hardware setup(2)
