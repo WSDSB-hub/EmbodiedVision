@@ -141,7 +141,8 @@ The constant `150` was determined by placing an object at a known 1-meter distan
 
 Each detection box is annotated with: class name, confidence score, and estimated distance in meters.
 
-*[Place YOLO detection result here. Show the camera frame with bounding boxes, class labels, confidence scores, and distance annotations. Ideally, include a scene with multiple objects at different distances — e.g., a chair at 1.5m, a backpack at 1.2m, a person at 2.0m.]*
+<img src="perception_result.png"/>
+
 
 ---
 
