@@ -14,7 +14,7 @@ Along the way, I burned a motor driver, fried an MCU, fought an encoder that ref
 
 The system uses a heterogeneous computing architecture. The laptop handles all AI inference — YOLO object detection and MiDaS depth estimation — because these models require computational resources far beyond what a microcontroller can provide. The STM32 handles real-time motor control — reading encoder pulses, computing PID output, and updating PWM duty cycles at a strict 100 Hz interval — because this task requires deterministic timing that a general-purpose OS cannot guarantee.
 
-The two processors communicate over Bluetooth. The laptop sends single ASCII characters (`'w'`, `'a'`, `'d'`, `'s'`, space) that the STM32 parses as motion commands. This simple protocol keeps the firmware minimal and reliable.
+The two processors communicate over Bluetooth. The laptop sends single ASCII characters (‘w’, ‘a’, ‘d’, ‘s’, space) that the STM32 parses as motion commands. This simple protocol keeps the firmware minimal and reliable.
 
 <img src="System Architecture.drawio.png"/>
 
